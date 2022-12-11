@@ -1,3 +1,4 @@
 *.code-workspace
 memo.txt
 .DS_Store
+.bash_history
