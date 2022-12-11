@@ -1,8 +1,11 @@
-#FROM ubuntu
-#RUN apt-get update && apt-get install -y xeyes
+FROM ubuntu:22.04
+RUN apt-get update && apt-get install -y git
 
-FROM alpine
+WORKDIR /root
+COPY . /root
 
-RUN apk --no-cache add xeyes
+FROM mikanos-dev:latest
 
-CMD ["/usr/bin/xeyes"]
+#FROM alpine
+#RUN apk --no-cache add xeyes
+#CMD ["/usr/bin/xeyes"]

@@ -1,0 +1,14 @@
+version: "3.9"
+services:
+  mikanos:
+    build: .
+    image: mikanos-dev:latest
+    volumes:
+      - .:/root:delegated
+      # x11用
+      - ~/.Xauthority:/root/.Xauthority 
+    environment:
+      DISPLAY: 192.168.11.4:0
+
+
+
